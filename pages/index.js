@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/components/Home.module.css'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,10 @@ export default function Home() {
       </Head>
       <Navbar/>
       {/* ALREADY IMPORTED THE NAVBAR HERE */}
-      
+       
+
+      <Footer/>
+
 
     </>
   )
