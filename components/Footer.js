@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../constants/Button";
+import { Button } from "../styles/Button";
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+
+
 
 const Footer = () => {
   return (
@@ -11,12 +13,12 @@ const Footer = () => {
         <div className="grid grid-two-column">
           <div>
             <h3>Ready to get started?</h3>
-            <h3>Talk to us today</h3>
+            <h3>Talk to Us today</h3>
           </div>
 
           <div className="contact-short-btn">
             <Link href="/">
-             <Button>Get Started</Button>
+<Button>Get Started</Button>
             </Link>
           </div>
         </div>
@@ -67,7 +69,7 @@ const Footer = () => {
 
           {/* 4th column  */}
           <div className="footer-contact">
-            <h3>Call Us</h3>
+            <h3>Call Us here</h3>
             <h3>+91 12345678978</h3>
           </div>
         </div>
@@ -77,7 +79,7 @@ const Footer = () => {
           <hr />
           <div className="container grid grid-two-column">
             <p>
-              @{new Date().getFullYear()} Asif and Asma All Rights Reserved
+              @{new Date().getFullYear()} Asif Islam All Rights Reserved
             </p>
             <div>
               <p>PRIVACY POLICY</p>
