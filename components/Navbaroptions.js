@@ -73,7 +73,7 @@ const Nav = styled.nav`
         text-align: center;
 
         transform: translateX(100%);
-
+  
         visibility: hidden;
         opacity: 0;
 
@@ -117,7 +117,6 @@ const Nav = styled.nav`
 
 const Navbaropt = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  //using the states here for menu option
 
   return (
     <Nav>

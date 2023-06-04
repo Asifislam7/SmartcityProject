@@ -1,0 +1,39 @@
+.Services{
+    /* display: flex; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 20px;
+  
+
+}
+.Services img{
+    width: 300px;
+    height: 200px;
+    padding: 2px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    margin-right: auto;
+   
+    border-radius: 30px;
+}
+.Services img:hover{
+transform: scale(1.1);
+transition-duration: 2s;
+
+
+}
+
+@media  only screen and (max-width:768px){
+    .Services{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+}
