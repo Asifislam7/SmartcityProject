@@ -53,7 +53,7 @@ const HeroSection = () => {
                 </div>
               </Link>
 
-              <Link href="/waste">
+              <Link href="/Waste">
                 <img src="./images/waste.jpg" alt="" />
                 <div>
                   <Button className="btn">Waste</Button>

@@ -1,7 +1,7 @@
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import '@/styles/globals.css'
 import { ThemeProvider } from "styled-components";
-
+import Navbar from '@/components/Navbar'
 export default function App({ Component, pageProps }) {
   const theme = {
     colors: {
@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
+      <Navbar/>
     <Component {...pageProps} />
     </ThemeProvider>
   )

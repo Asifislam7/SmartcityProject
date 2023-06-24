@@ -47,9 +47,9 @@ const Contact = () => {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
 
-      <div className="container">
+      <div className="container" style={{display:'flex'}}>
       <h1><p className="hero-top-data" style={{color:'white',fontSize:'3rem'}}>Register Here</p></h1>
-        <div className="contact-form" style={{display:'flex'}}>
+        <div className="contact-form" >
           <form
             action="https://formspree.io/f/xgedgjkr"
             method="POST"
