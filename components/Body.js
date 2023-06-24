@@ -5,6 +5,7 @@ import { useGlobalContext } from "../constants/Context";
 import "animate.css"
 import Link from "next/link";
 import styles from "../styles/components/Services.module.css"
+import Contact from "@/pages/Contact";
 
 const HeroSection = () => {
   //   const { image } = useGlobalContext();
@@ -17,10 +18,10 @@ const HeroSection = () => {
             <p className="hero-top-data">Advanced Aligarh</p>
             <h1 className="hero-heading animate__animated animate__fadeInDown" style={{ color: 'rgb(140, 20, 252)' }}>Your goal is our mission</h1>
             <p className="hero-para animate__animated animate__fadeInUp" style={{ color: 'white' }}>
-              Creating smart connected systems  for our urban areas provides a great many benefits for citizens around the world, not only to improve quality of life, but also to ensure sustainability and the best possible use of a city with such website can more efficiently manage infrastructure and maintenance, thereby reducing operating costs and improving the lives of its citizens.
+              Creating Smart connected systems  for our urban areas provides a great many benefits for citizens around the world, not only to improve quality of life, but also to ensure sustainability and the best possible use of a city with such website can more efficiently manage infrastructure and maintenance, thereby reducing operating costs and improving the lives of its citizens.
             </p>
             <Button className="btn hireme-btn">
-              <Link href="/contact"> Complain here </Link>
+              <Link href="/Contact"> Complain here </Link>
             </Button>
           </div>
 
@@ -58,7 +59,7 @@ const HeroSection = () => {
                   <Button className="btn">Waste</Button>
                 </div>
               </Link>
-
+  
               <Link href="/pest">
                 <img src="./images/pest.jpeg" alt="" />
                 <div>
@@ -69,6 +70,7 @@ const HeroSection = () => {
           </div>
       
       </SectionWrapper>
+      <Contact/>
     </>
   );
 };

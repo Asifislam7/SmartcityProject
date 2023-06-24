@@ -5,6 +5,7 @@ import { CgMenu, CgCloseR } from "react-icons/cg";
 import Link from "next/link";
 
 
+
 const Nav = styled.nav`
     .navbar-list {
       display: flex;
@@ -151,7 +152,7 @@ const Navbaropt = () => {
             <Link
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              href="/contact">
+              href="/Contact">
                 Register
             </Link>
           </li>

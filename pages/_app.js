@@ -2,7 +2,6 @@ import { GlobalStyle } from '@/styles/GlobalStyle';
 import '@/styles/globals.css'
 import { ThemeProvider } from "styled-components";
 
-
 export default function App({ Component, pageProps }) {
   const theme = {
     colors: {
