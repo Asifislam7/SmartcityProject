@@ -1,0 +1,17 @@
+.Form{
+    
+    box-sizing: border-box;
+    padding: 20px;
+    background-color:#ffb6c1;
+    font-size: 20px;
+    margin: auto;
+}
+
+.Form input{
+    font-size:18px;
+    background-color: white;
+}
+.Form button{
+    font-size:20px;
+    margin:auto
+}

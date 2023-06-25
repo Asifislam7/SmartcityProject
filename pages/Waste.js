@@ -12,8 +12,8 @@ export default function BasicButtons() {
   <>
       <div className='wastepage' style={{color:'white', padding:'20px',background:'black'}}>
       <div className={styles.wastebuttons}>
-      <Link href="/waste/wastemanage"><Button variant="contained">Waste Management</Button></Link>
-      <Link href="/waste/contractor"><Button variant="contained">Contractor Section</Button></Link>
+      <Link href="/Wastemanage"><Button variant="contained">Waste Management</Button></Link>
+      <Link href="/Contractor"><Button variant="contained">Contractor Section</Button></Link>
       </div>
       <div className='text animate__animated animate__fadeInUp' style={{textAlign:'justify',padding:'20px',fontSize:'25px',fontFamily:'kolketif'}}>
       Waste is something everyone wants to get rid of.

@@ -2,7 +2,12 @@ import { GlobalStyle } from '@/styles/GlobalStyle';
 import '@/styles/globals.css'
 import { ThemeProvider } from "styled-components";
 import Navbar from '@/components/Navbar'
+import "bootstrap/dist/css/bootstrap.css";
+import { useEffect } from "react";
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   const theme = {
     colors: {
       heading: "rgb(24 24 29)",
