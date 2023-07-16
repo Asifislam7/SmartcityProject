@@ -5,7 +5,6 @@ import { useGlobalContext } from "../constants/Context";
 import "animate.css"
 import Link from "next/link";
 import styles from "../styles/components/Services.module.css"
-import Contact from "@/pages/Contact";
 
 const HeroSection = () => {
   //   const { image } = useGlobalContext();

@@ -136,7 +136,7 @@ const Navbaropt = () => {
             <Link
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              href="/about">
+              href="/About">
               About
             </Link>
           </li>
