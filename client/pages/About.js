@@ -9,6 +9,7 @@ const About = () => {
         setIsElementVisible(!isElementVisible);
       };
   return (
+    <div className='container-fluid'>
     <div className='container w-75 mx-auto my-5 min-vh-100'>
         <h2 className='text-bg-light animate__animated animate__fadeInDown' style={{fontFamily:'Kolketif',fontWeight:'bold'}}>About us</h2>
      
@@ -97,7 +98,7 @@ Enhanced Safety and Security: Smart city technologies enable advanced security s
 </div>}
 
     </div>
- 
+    </div>
 
   )
 }
