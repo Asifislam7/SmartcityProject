@@ -2,7 +2,7 @@ import { GlobalStyle } from '@/styles/GlobalStyle';
 import '@/styles/globals.css'
 import { ThemeProvider } from "styled-components";
 import Navbar from '@/components/Navbar'
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import GoToTop from '@/components/GotoTop';
 import Footer from '@/components/Footer';

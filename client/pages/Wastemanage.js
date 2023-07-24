@@ -69,7 +69,7 @@ console.log('Data saved');
     <div className="form-check mt-5">
       <input className="form-check-input " type="checkbox" id="gridCheck"/>   
       <label className="form-check-label my-3" for="gridCheck">
-        Check me out
+        Check me out here
       </label>
     </div>
   </div>

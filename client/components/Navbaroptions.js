@@ -6,6 +6,83 @@ import Link from "next/link";
 
 
 
+
+const Navbaropt = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  return (
+    <Nav>
+        {/* this creates a wrapper class for the css of any thing we want to style */}
+      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
+        <ul className="navbar-list">
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/About">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/service">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/Contact">
+                Register
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/News">
+                News
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/Feedback">
+                Feedback
+            </Link>
+          </li>
+        </ul>
+        {/* //nav icon */}
+        <div className="mobile-navbar-btn">
+          <CgMenu
+            name="menu-outline"
+            className="mobile-nav-icon"
+            onClick={() => setOpenMenu(true)}
+          />
+          <CgCloseR
+            name="close-outline"
+            className="close-outline mobile-nav-icon"
+            onClick={() => setOpenMenu(false)}
+          />
+        </div>
+      </div>
+    </Nav>
+  );
+};
+
+
 const Nav = styled.nav`
     .navbar-list {
       display: flex;
@@ -115,66 +192,5 @@ const Nav = styled.nav`
       }
     }
   `;
-
-const Navbaropt = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  return (
-    <Nav>
-        {/* this creates a wrapper class for the css of any thing we want to style */}
-      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
-        <ul className="navbar-list">
-          <li>
-            <Link
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              href="/About">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              href="/service">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              href="/Contact">
-                Register
-            </Link>
-          </li>
-        </ul>
-        {/* //nav icon */}
-        <div className="mobile-navbar-btn">
-          <CgMenu
-            name="menu-outline"
-            className="mobile-nav-icon"
-            onClick={() => setOpenMenu(true)}
-          />
-          <CgCloseR
-            name="close-outline"
-            className="close-outline mobile-nav-icon"
-            onClick={() => setOpenMenu(false)}
-          />
-        </div>
-      </div>
-    </Nav>
-  );
-};
-
-
 
 export default Navbaropt;

@@ -20,7 +20,7 @@ const HeroSection = () => {
               Creating Smart connected systems  for our urban areas provides a great many benefits for citizens around the world, not only to improve quality of life, but also to ensure sustainability and the best possible use of a city with such website can more efficiently manage infrastructure and maintenance, thereby reducing operating costs and improving the lives of its citizens.
             </p>
             <Button className="btn hireme-btn">
-              <Link href="/Contact"> Complain here </Link>
+              <Link href="/Feedback"> Complain here </Link>
             </Button>
           </div>
 
