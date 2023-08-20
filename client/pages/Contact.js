@@ -1,9 +1,9 @@
 import axios from "axios";
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 
-import styled from "styled-components";
 
  const Contact = () => {
+
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -21,6 +21,7 @@ import styled from "styled-components";
     await axios.post('http://localhost:8000/client/pages/Contact',{username,email,password},{withCredentials:true})
     console.log('Data saved');
     alert("you have been registered");
+
   
     } catch (error) {
       console.log('error saving the data',error);
@@ -31,6 +32,8 @@ import styled from "styled-components";
     alert("password does not match");
   }
     }
+
+   
 
  
 
@@ -47,10 +50,10 @@ import styled from "styled-components";
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
   
-  <h2 className="bg-light shadow-lg w-50 mx-auto my-5 fw-light text-black-50" style={{fontFamily:'kolketif'}}>Register here</h2>
+  <h2 className="bg-warning-subtle shadow-lg w-50 mx-auto my-5 fw-light text-black-50" style={{fontFamily:'kolketif'}}>Register here</h2>
 
   <div className="animate__animated animate__fadeInDown container rounded-5 mx-auto  my-5 d-flex align-items-center justify-content-center w-75 bg-light text-dark fs-1 p-5">
-    <form className="row g-3 mx-auto" onSubmit={handleSubmit}>
+    <form className="row g-3 mx-auto" id="contactForm" onSubmit={handleSubmit} >
     <div className="col-md-6">
     <label for="username" className="form-label my-3">Username</label>
     <input  value={username} onChange={(e)=>{setUsername(e.target.value)}} type="text" className="form-control h-50 text-lowercase" id="Username" placeholder="Only lower case username allowed"/>
@@ -68,7 +71,7 @@ import styled from "styled-components";
     <input type="password" value={cnfpassword} onChange={(e)=>{setcnfPassword(e.target.value)}} className="form-control h-50" id="inputPassword4"/>
   </div>
   <div className="col-12" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-    <button type="submit" className="btn btn-success w-25 fs-3 my-5 rounded-5 link-opacity-50-hover h-50">Submit to Officials</button>
+    <button type="submit" className="btn btn-success w-25 fs-3 my-5 rounded-5 link-opacity-50-hover h-50">Submit</button>
     {/* <button type="submit" className="btn btn-primary">Submit to private Parties</button> */}
     
   </div>
