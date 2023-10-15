@@ -63,6 +63,14 @@ const Navbaropt = () => {
                 Feedback
             </Link>
           </li>
+          <li>
+            <Link
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              href="/Blogs">
+                Blogs and Events
+            </Link>
+          </li>
         </ul>
         {/* //nav icon */}
         <div className="mobile-navbar-btn">

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React,{useState,useEffect} from "react";
+//useEffect can check the rendering of the page on the basis of the dependencies
 
 
  const Contact = () => {
@@ -13,11 +14,11 @@ import React,{useState,useEffect} from "react";
 
   const handleSubmit= async(e)=>{
     e.preventDefault();
-
-    if(password === cnfpassword){
     
+    if(password === cnfpassword){
+  
     try {
-    //sendeing a post request to the express js server
+    //sending a post request to the express js server
     await axios.post('http://localhost:8000/client/pages/Contact',{username,email,password},{withCredentials:true})
     console.log('Data saved');
     alert("you have been registered");
@@ -25,7 +26,7 @@ import React,{useState,useEffect} from "react";
   
     } catch (error) {
       console.log('error saving the data',error);
-      alert("data not saved due");
+      alert("data not saved");
     }
   }
   else{

@@ -14,11 +14,13 @@ app.get("/",(req,res)=>{
   res.send("Hello world")
 })
 require("./db/conn");
+//connection already made
 const Register= require("./models/registration");
 const userregister= require("./models/useregister");
-const FeedbackData= require("./models/feedback")
+const FeedbackData= require("./models/feedback");
+const contractorlogin= require("./models/contractor");
 
-//path we dont require here as we are not diplaing from the backend, we are displaying through the frontend.
+//path we dont require here as we are not displaing from the backend, we are displaying through the frontend.
 
 
 //defining the route to get the data to store in the database
@@ -69,6 +71,18 @@ res.status(200).send("Registration successfull");
 //finally saving the document
 
 
+//saving the data of the contractor
+app.post('/client/pages/Contractor',async(req,res)=>{
+  const{userid, password}= req.body;
+
+  //creating the document to store in the model 
+  const contractordata = new contractorlogin({userid,password});
+
+
+await contractordata.save();
+res.status(200).send("welcome to the dashboard");
+
+});
 // we use render for a view engine
 
 app.listen(8000,(req,res)=>{
