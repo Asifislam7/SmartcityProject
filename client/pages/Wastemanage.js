@@ -13,7 +13,6 @@ const[zip,setZip]=useState('');
 const[file,setFile]=useState('');
 
 
-
 const handleSubmit= async(e)=>{
 e.preventDefault();
 
@@ -30,9 +29,6 @@ console.log('Data saved');
 }
 
 }
-
-
-
 
   return(
     <div className="animate__animated animate__fadeInDown container rounded-5 mx-auto  my-5 d-flex align-items-center justify-content-center w-75 bg-light text-dark fs-1 p-5">
