@@ -29,3 +29,5 @@ export const Button = styled.button`
     font-size: 1.8rem;
   }
 `;
+
+//if the component is not exported default then { } has to be used to import the components in other files

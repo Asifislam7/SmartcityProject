@@ -7,7 +7,9 @@ import { useEffect } from "react";
 import GoToTop from '@/components/GotoTop';
 import Footer from '@/components/Footer';
 
-export default function App({ Component, pageProps }) {
+
+
+export default function App({ Component, pageProps }){
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
@@ -41,3 +43,4 @@ export default function App({ Component, pageProps }) {
     </ThemeProvider>
   )
 }
+

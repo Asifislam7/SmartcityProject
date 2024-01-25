@@ -1,10 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { useGlobalContext } from "../constants/Context";
 import "animate.css"
 import Link from "next/link";
 import styles from "../styles/components/Services.module.css"
+import styled from "styled-components";
+
 
 const HeroSection = () => {
   //   const { image } = useGlobalContext();
@@ -59,10 +60,10 @@ const HeroSection = () => {
                 </div>
               </Link>
   
-              <Link href="/pest">
-                <img src="./images/pest.jpeg" alt="" />
+              <Link href="/info">
+                <img src="./images/info.png" alt="" style={{width:'300px'}} />
                 <div>
-                  <Button className="btn">Pest</Button>
+                  <Button className="btn">Information</Button>
                 </div>
               </Link>
             </div>

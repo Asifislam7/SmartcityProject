@@ -35,7 +35,7 @@ console.log('Data saved');
     <form className="row g-3 mx-auto" onSubmit={handleSubmit} >
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label my-3">Email</label>
-    <input  value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email" className="form-control h-50" id="inputEmail4"/>
+    <input  value={email} onChange={(e)=>{setEmail(e.target.value)}} type='email' className='form-control h-50 text-lowercase' id='inputEmail4'  />
   </div>
   <div className="col-md-6">
     <label for="inputPassword4" className="form-label my-3">Password</label>

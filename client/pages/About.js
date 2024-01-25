@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import "animate.css"
+import {Button} from '../styles/Button'
+
 const About = () => {
 
     const [isElementVisible, setIsElementVisible] = useState(false);
-
 
     const handleButtonClick = () => {
         setIsElementVisible(!isElementVisible);
@@ -78,9 +79,9 @@ Smart Governance and Efficiency: Streamline and digitize government processes to
 Knowledge Sharing and Collaboration: Foster knowledge sharing and collaboration among stakeholders, including academia, industry, government, and citizens, to create an ecosystem of innovation, research, and best practices in smart city development.
        </p>
    
- <button className='btn btn-info w-25' onClick={handleButtonClick}>Read more</button>
+ <Button onClick={handleButtonClick}>Read more</Button>
 {isElementVisible && <div>
- <p style={{textAlign:'justify'}} className='animate__animated animate__fadeInDown' >
+ <p style={{textAlign:'justify',color:'slategray'}} className='animate__animated animate__fadeInDown' >
  The smart city initiative brings numerous benefits and advantages to the community, residents, and businesses. Emphasizing these advantages helps generate awareness and support for the project. Here are some key benefits to highlight:
  <br></br>
  <br></br>

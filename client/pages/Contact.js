@@ -1,45 +1,80 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-//useEffect can check the rendering of the page on the basis of the dependencies
-const Contact = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [cnfpassword, setcnfPassword] = useState('');
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+import React, { useState} from 'react';
+import FormUserDetails from '../components/FormUserDetails';
+import FormPersonalDetails from '../components/FormPersonalDetails';
+import Confirm from '../components/Confirm';
+import Success from '../components/Success';
 
-    if (password === cnfpassword) {
+const UserForm = () => {
+  const [step, setStep] = useState(1);
+  const [userDetails, setUserDetails] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    occupation: '',
+    city: '',
+    concern: ''
+  });
 
-      try {
-        //sending a post request to the express js server
-        await axios.post('http://localhost:8000/client/pages/Contact', { username, email, password }, { withCredentials: true })
-        console.log('Data saved');
-        alert("you have been registered");
+  // Proceed to next step
+  const nextStep = () => {
+    setStep(step + 1);
+  };
 
-      } catch (error) {
-        console.log('error saving the data', error);
-        alert("data not saved");
-      }
-    }
-    else {
-      alert("password does not match");
-    }
+  // Go back to prev step
+  const prevStep = () => {
+    setStep(step - 1);
+  };
+
+  
+
+  // Handle fields change
+  const handleChange = input => e => {
+    setUserDetails({ ...userDetails, [input]: e.target.value });
+  };
+
+
+  const values = { ...userDetails };
+
+  switch (step) {
+    case 1:
+      return (
+        
+        <FormUserDetails
+          nextStep={nextStep}
+          handleChange={handleChange}
+          values={values}
+       
+        />
+       
+      );
+    case 2:
+      return (
+        <FormPersonalDetails
+          nextStep={nextStep}
+          prevStep={prevStep}
+          handleChange={handleChange}
+          values={values}
+         
+        />
+      );
+    case 3:
+      return (
+        <Confirm
+          nextStep={nextStep}
+          prevStep={prevStep}
+          values={values}
+          
+
+        />
+      );
+    case 4:
+      return <Success />;
+    default:
+      console.log('This is a multi-step form built with React.');
+      return null;
   }
-
-
-
-
-
-  return (
-  <>
-  <h1>Contact Us</h1>
-  </>
-  );
+  
 };
 
-
-
-export default Contact;
-
+export default UserForm;
 

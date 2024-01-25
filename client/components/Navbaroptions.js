@@ -13,7 +13,7 @@ const Navbaropt = () => {
   return (
     <Nav>
         {/* this creates a wrapper class for the css of any thing we want to style */}
-      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
+      <div className={openMenu ? "menuIcon active " : "menuIcon"}>
         <ul className="navbar-list">
           <li>
             <Link
