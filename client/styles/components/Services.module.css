@@ -1,13 +1,13 @@
 .Services{
     /* display: flex; */
     display: flex;
-    /* flex-wrap: wrap; */
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     padding-left: 20px;
+    flex-wrap: wrap;
   
-
 }
 .Services img{
     width: 300px;
@@ -27,13 +27,9 @@ transition-duration: 2s;
 
 
 }
-
-@media  only screen and (max-width:768px){
-    .Services{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+@media (max-width: 768px) {
+    .Services {
+        flex-direction: column; /* Stack images in a column on smaller screens */
     }
-    
+   
 }

@@ -36,7 +36,7 @@ const HeroSection = () => {
       {/* Services section starts here */}
       <SectionWrapper className="section animate__animated animate__fadeInDown">
           <h2 className="common-heading">Our Services</h2>
-          <div className="container grid grid-three-column">
+          <div className="container">
             {/* <Firstyear image={"sewage.jpeg"} year={"Sewage"} title={"Sewage is the most prominent problem of the Aligarh nowadays and the solution is here"} /> */}
             <div className={styles.Services}>
               <Link href="/sewage">
@@ -60,10 +60,22 @@ const HeroSection = () => {
                 </div>
               </Link>
   
-              <Link href="/info">
-                <img src="./images/info.png" alt="" style={{width:'300px'}} />
+              <Link href="/Ecomnerce">
+                <img src="./images/info.png" alt=""/>
                 <div>
                   <Button className="btn">Information</Button>
+                </div>
+              </Link>
+              <Link href="/info">
+                <img src="./images/document.png" alt=""  />
+                <div>
+                  <Button className="btn">Documents</Button>
+                </div>
+              </Link>
+              <Link href="/info">
+                <img src="./images/challan.png" alt="" />
+                <div>
+                  <Button className="btn">Challan and Support</Button>
                 </div>
               </Link>
             </div>

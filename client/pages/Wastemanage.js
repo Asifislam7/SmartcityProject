@@ -31,8 +31,8 @@ console.log('Data saved');
 }
 
   return(
-    <div className="animate__animated animate__fadeInDown container rounded-5 mx-auto  my-5 d-flex align-items-center justify-content-center w-75 bg-light text-dark fs-1 p-5">
-    <form className="row g-3 mx-auto" onSubmit={handleSubmit} >
+    <div className="animate__animated animate__fadeInDown container rounded-5 mx-auto  my-5 d-flex align-items-center justify-content-center w-75 bg-light text-dark fs-2 p-5">
+    <form className="row g-5 mx-auto" onSubmit={handleSubmit} >
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label my-3">Email</label>
     <input  value={email} onChange={(e)=>{setEmail(e.target.value)}} type='email' className='form-control h-50 text-lowercase' id='inputEmail4'  />
@@ -70,7 +70,7 @@ console.log('Data saved');
     </div>
   </div>
   <div className="col-12" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-    <button type="submit" className="btn btn-success w-25 fs-3 my-5 rounded-5 link-opacity-50-hover h-50">Submit to Officials</button>
+    <button type="submit" className="btn btn-warning w-25 fs-3 my-5 rounded-5 link-opacity-50-hover h-50">Submit to Officials</button>
     {/* <button type="submit" className="btn btn-primary">Submit to private Parties</button> */}
     
   </div>
