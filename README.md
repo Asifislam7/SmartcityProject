@@ -1,4 +1,4 @@
-README: Smart City Web App
+Smart City Web App
 Overview
 This web application is designed to provide a comprehensive platform for citizens to interact with various smart city services, with a primary focus on waste management. It aims to enhance the quality of life for residents by offering efficient and convenient solutions for waste disposal, recycling, and other city-related services.
 
