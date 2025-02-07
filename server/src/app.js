@@ -11,7 +11,7 @@ app.use(
   );
 
 app.get("/",(req,res)=>{
-  res.send("Hello world")
+  res.send("Server running properly")
 })
 require("./db/conn");
 //connection already made
