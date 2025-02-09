@@ -1,8 +1,6 @@
 import React from 'react';
-import 'animate.css'
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
 import styled from "styled-components";
 
 const Success = ({ nextStep, prevStep }) => {
@@ -18,24 +16,28 @@ const Success = ({ nextStep, prevStep }) => {
   };
 
   return (
-    <MuiThemeProvider>
-      <>
-        <Dialog
-          open
-          fullWidth
-          maxWidth='md'
-          className='dialog'
-        >
-          <AppBar title="Success" />
-          <h1>Thank You For Your Submission</h1>
-          <p>You will get an email with further instructions.</p>
-        </Dialog>
-     
-      </>
-    </MuiThemeProvider>
+    <div className="container">
+      <div className="modal-dialog animate__animated animate__fadeInDown w-75 m-auto">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title">Success</h5>
+          </div>
+          <div className="modal-body">
+            <h4>Thank you for your submission!</h4>
+            <p>Your form has been successfully submitted.</p>
+          </div>
+          <div className="modal-footer">
+            <button className="btn btn-primary" onClick={continueClick}>
+              Continue
+            </button>
+            <button className="btn btn-secondary" onClick={backClick}>
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
- 
 };
-
 
 export default Success;

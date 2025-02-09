@@ -1,7 +1,5 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-// import Button from '@mui/material/Button';
-// import "./components/css/style.css";
+
 import 'animate.css';
 import Link from 'next/link';
 import styled from "styled-components";
